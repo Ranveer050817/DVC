@@ -36,8 +36,12 @@ export function Packages() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex flex-col bg-[#050505] border border-[#ff3b30]/30 hover:border-[#ff3b30]/60 hover:shadow-[0_0_30px_rgba(255,59,48,0.15)] rounded-[20px] overflow-hidden group transition-all duration-500 h-[550px]"
             >
-              <div className="h-[80%] w-full relative overflow-hidden">
-                <img src={pkg.image} alt={pkg.name} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 z-0" />
+              <div className="relative w-full h-72 overflow-hidden">
+                <img
+                  src={pkg.image}
+                  alt={pkg.name}
+                  className="w-full h-full object-cover block"
+                />
               </div>
               
               <div className="h-[20%] p-4 flex flex-col justify-between border-t border-[#ff3b30]/20 bg-[#050505]/80 backdrop-blur-md relative z-10">
