@@ -1,11 +1,16 @@
 import { motion } from 'motion/react';
 import { openWhatsApp } from '../utils/contact';
 
+import img1bhk from '../assets/1bhk.jpg';
+import img2bhk from '../assets/2bhk.jpg';
+import img3bhk from '../assets/3bhk.jpg';
+import img4bhk from '../assets/4bhk.jpg';
+
 const packages = [
-  { name: "1 BHK", price: "₹2799", image: "/1bhk.jpg" },
-  { name: "2 BHK", price: "₹3599", image: "/2bhk.jpg" },
-  { name: "3 BHK", price: "₹4399", image: "/3bhk.jpg" },
-  { name: "4 BHK", price: "₹5499", image: "/4bhk.jpg" }
+  { name: "1 BHK", price: "₹2799", image: img1bhk },
+  { name: "2 BHK", price: "₹3599", image: img2bhk },
+  { name: "3 BHK", price: "₹4399", image: img3bhk },
+  { name: "4 BHK", price: "₹5499", image: img4bhk }
 ];
 
 export function Packages() {

@@ -1,58 +1,72 @@
 import { motion } from 'motion/react';
 import { openWhatsApp } from '../utils/contact';
 
+import imgFloor from '../assets/floorcleaner.jpg';
+import imgToilet from '../assets/toiletcleaner.jpg';
+import imgGlass from '../assets/glasscleaner.jpg';
+import imgBathroom from '../assets/bathroomcleaner.jpg';
+import imgKitchen from '../assets/kitchendegreaser.jpg';
+import imgMulti from '../assets/multipurpose.jpg';
+import imgHardWater from '../assets/hardwaterremover.jpg';
+import imgFurniture from '../assets/furniturepolish.jpg';
+import imgTile from '../assets/tilecleaner.jpg';
+import imgMicrofiber from '../assets/microfiber.jpg';
+import imgToiletBrush from '../assets/toiletbrush.jpg';
+import imgMop from '../assets/mop.jpg';
+import imgSpray from '../assets/spraybottle.jpg';
+
 const products = [
   {
     name: "Floor Cleaner\nDevil Cleanerz",
-    image: "/floorcleaner.jpg"
+    image: imgFloor
   },
   {
     name: "Toilet Cleaner\nDevil Cleanerz",
-    image: "/toiletcleaner.jpg"
+    image: imgToilet
   },
   {
     name: "Glass Cleaner\nDevil Cleanerz",
-    image: "/glasscleaner.jpg"
+    image: imgGlass
   },
   {
     name: "Bathroom Cleaner\nDevil Cleanerz",
-    image: "/bathroomcleaner.jpg"
+    image: imgBathroom
   },
   {
     name: "Kitchen Degreaser\nDevil Cleanerz",
-    image: "/kitchendegreaser.jpg"
+    image: imgKitchen
   },
   {
     name: "Multi-Purpose Surface Cleaner\nDevil Cleanerz",
-    image: "/multipurpose.jpg"
+    image: imgMulti
   },
   {
     name: "Hard Water Stain Remover\nDevil Cleanerz",
-    image: "/hardwaterremover.jpg"
+    image: imgHardWater
   },
   {
     name: "Furniture Polish\nDevil Cleanerz",
-    image: "/furniturepolish.jpg"
+    image: imgFurniture
   },
   {
     name: "Tile & Marble Cleaner\nDevil Cleanerz",
-    image: "/tilecleaner.jpg"
+    image: imgTile
   },
   {
     name: "Microfiber Cloths\nDevil Cleanerz",
-    image: "/microfiber.jpg"
+    image: imgMicrofiber
   },
   {
     name: "Toilet Brushes\nDevil Cleanerz",
-    image: "/toiletbrush.jpg"
+    image: imgToiletBrush
   },
   {
     name: "3-in-1 Mops\nDevil Cleanerz",
-    image: "/mop.jpg"
+    image: imgMop
   },
   {
     name: "Spray Bottles\nDevil Cleanerz",
-    image: "/spraybottle.jpg"
+    image: imgSpray
   }
 ];
 

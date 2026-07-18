@@ -2,48 +2,56 @@ import { motion } from 'motion/react';
 import { Home, Utensils, Building2, Warehouse, Briefcase, TreePine, Castle } from 'lucide-react';
 import { openWhatsApp } from '../utils/contact';
 
+import img1bhk from '../assets/1bhk.jpg';
+import imgRestaurant from '../assets/dcresraunt.jpg';
+import imgHotel from '../assets/dchotel.jpg';
+import imgWarehouse from '../assets/dcwarehouse.jpg';
+import imgOffice from '../assets/dcoffice.jpg';
+import imgResort from '../assets/dcresort.jpg';
+import imgBungalow from '../assets/dcbunglow_villa.jpg';
+
 const services = [
   {
     name: "House Deep Cleaning",
     description: "Complete home deep cleaning for a fresh and hygienic living space.",
     icon: Home,
-    image: "/1bhk.jpg"
+    image: img1bhk
   },
   {
     name: "Restaurant Deep Cleaning",
     description: "Professional kitchen, dining area and restaurant deep cleaning.",
     icon: Utensils,
-    image: "/dcresraunt.jpg"
+    image: imgRestaurant
   },
   {
     name: "Hotel Deep Cleaning",
     description: "Complete hotel room, lobby and common area deep cleaning.",
     icon: Building2,
-    image: "/dchotel.jpg"
+    image: imgHotel
   },
   {
     name: "Warehouse Deep Cleaning",
     description: "Industrial warehouse dust removal and deep sanitation.",
     icon: Warehouse,
-    image: "/dcwarehouse.jpg"
+    image: imgWarehouse
   },
   {
     name: "Office Deep Cleaning",
     description: "Professional office workspace cleaning and sanitization.",
     icon: Briefcase,
-    image: "/dcoffice.jpg"
+    image: imgOffice
   },
   {
     name: "Resort Deep Cleaning",
     description: "Luxury resort and hospitality property deep cleaning.",
     icon: TreePine,
-    image: "/dcresort.jpg"
+    image: imgResort
   },
   {
     name: "Bungalow & Villa Deep Cleaning",
     description: "Premium deep cleaning for luxury villas and bungalows.",
     icon: Castle,
-    image: "/dcbunglow&villa.jpg"
+    image: imgBungalow
   }
 ];
 
