@@ -10,7 +10,6 @@ import { ServicesPage } from './pages/ServicesPage';
 import { ProductsPage } from './pages/ProductsPage';
 import { FloatingButtons } from './components/FloatingButtons';
 
-import imgLogo from './assets/devillogo.jpg';
 
 export default function App() {
   return (
@@ -29,7 +28,6 @@ export default function App() {
         
         <footer className="shrink-0 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between px-4 lg:px-12 py-6 text-[10px] uppercase font-bold tracking-widest text-gray-600 gap-4 sm:gap-0 bg-[#0b0b0b] z-10 mt-auto">
           <div className="flex items-center gap-4">
-            <img src={imgLogo} alt="Devil Cleanerz Logo" className="h-8 w-auto object-contain rounded opacity-80 hover:opacity-100 transition-opacity" />
             <div className="flex flex-col gap-1">
               <span>Instagram / DevilCleanerzz</span>
               <span>Twitter / DevilCleanerzz</span>

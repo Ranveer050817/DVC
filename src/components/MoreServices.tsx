@@ -2,56 +2,56 @@ import { motion } from 'motion/react';
 import { Home, Utensils, Building2, Warehouse, Briefcase, TreePine, Castle } from 'lucide-react';
 import { openWhatsApp } from '../utils/contact';
 
-import img1bhk from '../assets/1bhk.jpg';
-import imgRestaurant from '../assets/dcresraunt.jpg';
-import imgHotel from '../assets/dchotel.jpg';
-import imgWarehouse from '../assets/dcwarehouse.jpg';
-import imgOffice from '../assets/dcoffice.jpg';
-import imgResort from '../assets/dcresort.jpg';
-import imgBungalow from '../assets/dcbunglow_villa.jpg';
+import imgDCHouse from '../assets/dchouse.jpg';
+import imgDCRestaurant from '../assets/dcresraunt.jpg';
+import imgDCHotel from '../assets/dchotel.jpg';
+import imgDCWarehouse from '../assets/dcwarehouse.jpg';
+import imgDCOffice from '../assets/dcoffice.jpg';
+import imgDCResort from '../assets/dcresort.jpg';
+import imgDCBungalow from '../assets/dcbunglow&villa.jpg';
 
 const services = [
   {
     name: "House Deep Cleaning",
     description: "Complete home deep cleaning for a fresh and hygienic living space.",
     icon: Home,
-    image: img1bhk
+    image: imgDCHouse,
   },
   {
     name: "Restaurant Deep Cleaning",
     description: "Professional kitchen, dining area and restaurant deep cleaning.",
     icon: Utensils,
-    image: imgRestaurant
+    image: imgDCRestaurant,
   },
   {
     name: "Hotel Deep Cleaning",
     description: "Complete hotel room, lobby and common area deep cleaning.",
     icon: Building2,
-    image: imgHotel
+    image: imgDCHotel,
   },
   {
     name: "Warehouse Deep Cleaning",
     description: "Industrial warehouse dust removal and deep sanitation.",
     icon: Warehouse,
-    image: imgWarehouse
+    image: imgDCWarehouse,
   },
   {
     name: "Office Deep Cleaning",
     description: "Professional office workspace cleaning and sanitization.",
     icon: Briefcase,
-    image: imgOffice
+    image: imgDCOffice,
   },
   {
     name: "Resort Deep Cleaning",
     description: "Luxury resort and hospitality property deep cleaning.",
     icon: TreePine,
-    image: imgResort
+    image: imgDCResort,
   },
   {
     name: "Bungalow & Villa Deep Cleaning",
     description: "Premium deep cleaning for luxury villas and bungalows.",
     icon: Castle,
-    image: imgBungalow
+    image: imgDCBungalow,
   }
 ];
 
@@ -95,7 +95,7 @@ export function MoreServices() {
                 <img 
                   src={service.image} 
                   alt={service.name}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" 
                 />
                 <div className="absolute top-4 left-4 z-20 bg-black/80 backdrop-blur-md p-3 rounded-xl border border-white/10 group-hover:border-[#ff3b30] transition-colors duration-300">
                   <Icon className="w-6 h-6 text-[#ff3b30]" />

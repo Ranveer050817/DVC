@@ -1,44 +1,44 @@
 import { motion } from 'motion/react';
 import { openWhatsApp } from '../utils/contact';
 
-import imgFloor from '../assets/floorcleaner.jpg';
-import imgToilet from '../assets/toiletcleaner.jpg';
-import imgGlass from '../assets/glasscleaner.jpg';
-import imgBathroom from '../assets/bathroomcleaner.jpg';
-import imgKitchen from '../assets/kitchendegreaser.jpg';
-import imgMulti from '../assets/multipurpose.jpg';
+import imgFloorCleaner from '../assets/floorcleaner.jpg';
+import imgToiletCleaner from '../assets/toiletcleaner.jpg';
+import imgGlassCleaner from '../assets/glasscleaner.jpg';
+import imgBathroomCleaner from '../assets/bathroomcleaner.jpg';
+import imgKitchenDegreaser from '../assets/kitchendegreaser.jpg';
+import imgMultiPurpose from '../assets/multipurpose.jpg';
 import imgHardWater from '../assets/hardwaterremover.jpg';
-import imgFurniture from '../assets/furniturepolish.jpg';
-import imgTile from '../assets/tilecleaner.jpg';
+import imgFurniturePolish from '../assets/furniturepolish.jpg';
+import imgTileCleaner from '../assets/tilecleaner.jpg';
 import imgMicrofiber from '../assets/microfiber.jpg';
 import imgToiletBrush from '../assets/toiletbrush.jpg';
 import imgMop from '../assets/mop.jpg';
-import imgSpray from '../assets/spraybottle.jpg';
+import imgSprayBottle from '../assets/spraybottle.jpg';
 
 const products = [
   {
     name: "Floor Cleaner\nDevil Cleanerz",
-    image: imgFloor
+    image: imgFloorCleaner
   },
   {
     name: "Toilet Cleaner\nDevil Cleanerz",
-    image: imgToilet
+    image: imgToiletCleaner
   },
   {
     name: "Glass Cleaner\nDevil Cleanerz",
-    image: imgGlass
+    image: imgGlassCleaner
   },
   {
     name: "Bathroom Cleaner\nDevil Cleanerz",
-    image: imgBathroom
+    image: imgBathroomCleaner
   },
   {
     name: "Kitchen Degreaser\nDevil Cleanerz",
-    image: imgKitchen
+    image: imgKitchenDegreaser
   },
   {
     name: "Multi-Purpose Surface Cleaner\nDevil Cleanerz",
-    image: imgMulti
+    image: imgMultiPurpose
   },
   {
     name: "Hard Water Stain Remover\nDevil Cleanerz",
@@ -46,11 +46,11 @@ const products = [
   },
   {
     name: "Furniture Polish\nDevil Cleanerz",
-    image: imgFurniture
+    image: imgFurniturePolish
   },
   {
     name: "Tile & Marble Cleaner\nDevil Cleanerz",
-    image: imgTile
+    image: imgTileCleaner
   },
   {
     name: "Microfiber Cloths\nDevil Cleanerz",
@@ -66,7 +66,7 @@ const products = [
   },
   {
     name: "Spray Bottles\nDevil Cleanerz",
-    image: imgSpray
+    image: imgSprayBottle
   }
 ];
 
@@ -114,7 +114,7 @@ export function ProductsPage() {
               <img 
                 src={product.image} 
                 alt={product.name}
-                className="w-full h-full object-contain object-center block transform group-hover:scale-110 transition-transform duration-700 relative z-0"
+                className="w-full h-full object-cover object-center block transform group-hover:scale-110 transition-transform duration-700 relative z-0" 
               />
             </div>
             

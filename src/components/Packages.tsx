@@ -1,16 +1,15 @@
 import { motion } from 'motion/react';
 import { openWhatsApp } from '../utils/contact';
-
-import img1bhk from '../assets/1bhk.jpg';
-import img2bhk from '../assets/2bhk.jpg';
-import img3bhk from '../assets/3bhk.jpg';
-import img4bhk from '../assets/4bhk.jpg';
+import img1BHK from '../assets/1bhk.jpg';
+import img2BHK from '../assets/2bhk.jpg';
+import img3BHK from '../assets/3bhk.jpg';
+import img4BHK from '../assets/4bhk.jpg';
 
 const packages = [
-  { name: "1 BHK", price: "₹2799", image: img1bhk },
-  { name: "2 BHK", price: "₹3599", image: img2bhk },
-  { name: "3 BHK", price: "₹4399", image: img3bhk },
-  { name: "4 BHK", price: "₹5499", image: img4bhk }
+  { name: "1 BHK", price: "₹2799", image: img1BHK },
+  { name: "2 BHK", price: "₹3599", image: img2BHK },
+  { name: "3 BHK", price: "₹4399", image: img3BHK },
+  { name: "4 BHK", price: "₹5499", image: img4BHK }
 ];
 
 export function Packages() {
@@ -27,7 +26,6 @@ export function Packages() {
           OUR <span className="text-red-600">PACKAGES</span>
         </h2>
       </motion.div>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-7xl mx-auto">
         {packages.map((pkg, index) => (
             <motion.div
@@ -39,12 +37,7 @@ export function Packages() {
               className="flex flex-col bg-[#050505] border border-[#ff3b30]/30 hover:border-[#ff3b30]/60 hover:shadow-[0_0_30px_rgba(255,59,48,0.15)] rounded-[20px] overflow-hidden group transition-all duration-500 h-[550px]"
             >
               <div className="h-[80%] w-full p-0 flex items-center justify-center relative bg-black/40">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#ff3b30]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <img 
-                  src={pkg.image} 
-                  alt={pkg.name} 
-                  className="w-full h-full object-contain object-center block relative z-10 group-hover:scale-105 transition-transform duration-500" 
-                />
+                <img src={pkg.image} alt={pkg.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               
               <div className="h-[20%] p-4 flex flex-col justify-between border-t border-[#ff3b30]/20 bg-[#050505]/80 backdrop-blur-md">

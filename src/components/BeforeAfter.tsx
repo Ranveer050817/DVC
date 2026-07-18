@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { BeforeAfterSlider } from './BeforeAfterSlider';
-
 import imgKitchenB from '../assets/kitchenB.jpg';
 import imgKitchenA from '../assets/kitchenA.jpg';
 import imgBefore from '../assets/before.jpg';
@@ -33,7 +32,6 @@ export function BeforeAfter() {
           BEFORE <span className="text-red-600">&</span> AFTER
         </h2>
       </motion.div>
-
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 w-full">
         {comparisons.map((comp, index) => (
           <motion.div

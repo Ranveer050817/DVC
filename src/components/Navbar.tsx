@@ -2,7 +2,6 @@ import { motion } from 'motion/react';
 import { Flame } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { openWhatsApp } from '../utils/contact';
-
 import imgLogo from '../assets/devillogo.jpg';
 
 export function Navbar() {
