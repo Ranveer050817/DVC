@@ -111,7 +111,7 @@ export function ProductsPage() {
           >
             <div className="relative h-[80%] w-full p-0 flex items-center justify-center bg-white/5">
               <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none" />
-              <img 
+              <img referrerPolicy="no-referrer" 
                 src={product.image} 
                 alt={product.name}
                 className="w-full h-full object-cover object-center block transform group-hover:scale-110 transition-transform duration-700 relative z-0" 

@@ -11,7 +11,9 @@ import { ProductsPage } from './pages/ProductsPage';
 import { FloatingButtons } from './components/FloatingButtons';
 
 
+import testImg from "./assets/1bhk.jpg";
 export default function App() {
+  console.log("TEST IMG:", testImg);
   return (
     <div className="flex flex-col min-h-screen w-full relative bg-[#0b0b0b] text-white font-sans antialiased">
       <div className="fixed top-0 right-0 w-[500px] h-[500px] bg-red-900/10 rounded-full blur-[120px] pointer-events-none z-0"></div>

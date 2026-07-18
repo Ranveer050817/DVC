@@ -17,7 +17,7 @@ export function Navbar() {
       className="h-[65px] w-full flex items-center justify-between px-2 sm:px-4 lg:px-12 glass sticky top-0 z-50 shrink-0"
     >
       <Link to="/" className="flex items-center gap-2 md:gap-3 group cursor-pointer shrink-0">
-        <img src={imgLogo} alt="Devil Cleanerz Logo" className="h-8 md:h-10 w-auto object-contain rounded-md" />
+        <img referrerPolicy="no-referrer" src={imgLogo} alt="Devil Cleanerz Logo" className="h-8 md:h-10 w-auto object-contain rounded-md" />
         <span className="text-lg lg:text-xl font-black tracking-tighter text-white uppercase hidden md:block">
           DEVIL <span className="text-[#ff3b30]">CLEANERZ &amp; ENTERPRISES</span>
         </span>

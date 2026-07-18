@@ -8,7 +8,7 @@ import imgDCHotel from '../assets/dchotel.jpg';
 import imgDCWarehouse from '../assets/dcwarehouse.jpg';
 import imgDCOffice from '../assets/dcoffice.jpg';
 import imgDCResort from '../assets/dcresort.jpg';
-import imgDCBungalow from '../assets/dcbunglow&villa.jpg';
+import imgDCBungalow from '../assets/dcbunglow_villa.jpg';
 
 const services = [
   {
@@ -92,7 +92,7 @@ export function MoreServices() {
             >
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500 z-10" />
-                <img 
+                <img referrerPolicy="no-referrer" 
                   src={service.image} 
                   alt={service.name}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" 

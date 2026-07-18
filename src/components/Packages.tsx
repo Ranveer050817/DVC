@@ -37,7 +37,7 @@ export function Packages() {
               className="flex flex-col bg-[#050505] border border-[#ff3b30]/30 hover:border-[#ff3b30]/60 hover:shadow-[0_0_30px_rgba(255,59,48,0.15)] rounded-[20px] overflow-hidden group transition-all duration-500 h-[550px]"
             >
               <div className="relative w-full h-72 overflow-hidden">
-                <img
+                <img referrerPolicy="no-referrer"
                   src={pkg.image}
                   alt={pkg.name}
                   className="w-full h-full object-cover block"
