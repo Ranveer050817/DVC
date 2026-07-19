@@ -16,7 +16,7 @@ import imgDCHotel from "../assets/dchotel_new.jpg";
 import imgDCWarehouse from "../assets/dcwarehouse_new.jpg";
 import imgDCOffice from "../assets/dcoffice_new.jpg";
 import imgDCResort from "../assets/dcresort_new.jpg";
-import imgDCBungalow from "../assets/dcbunglow_villa_new.jpg";
+import imgDCBungalow from "../assets/dcbungalow&villa_new.jpg";
 
 const services = [
   {
