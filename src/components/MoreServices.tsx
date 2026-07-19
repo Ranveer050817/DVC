@@ -16,7 +16,7 @@ import imgDCHotel from "../assets/dchotel_new.jpg";
 import imgDCWarehouse from "../assets/dcwarehouse_new.jpg";
 import imgDCOffice from "../assets/dcoffice_new.jpg";
 import imgDCResort from "../assets/dcresort_new.jpg";
-import imgDCBungalow from "../assets/dcbunglow&villa_new.jpg";
+import imgDCBungalow from "../assets/dcbunglow_villa_new.jpg";
 
 const services = [
   {
@@ -103,7 +103,7 @@ export function MoreServices() {
                 <img referrerPolicy="no-referrer" 
                   src={service.image} 
                   alt={service.name}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" 
+                  className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-700" 
                 />
                 <div className="absolute top-4 left-4 z-20 bg-black/80 backdrop-blur-md p-3 rounded-xl border border-white/10 group-hover:border-[#ff3b30] transition-colors duration-300">
                   <Icon className="w-6 h-6 text-[#ff3b30]" />

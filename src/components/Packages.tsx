@@ -45,7 +45,7 @@ export function Packages() {
                 <img referrerPolicy="no-referrer"
                   src={pkg.image}
                   alt={pkg.name}
-                  className="w-full h-full object-cover block"
+                  className="w-full h-full object-contain block"
                 />
               </div>
               
