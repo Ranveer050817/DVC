@@ -1,9 +1,14 @@
 import { motion } from 'motion/react';
 import { openWhatsApp } from '../utils/contact';
-import img1BHK from '../assets/1bhk.jpg';
-import img2BHK from '../assets/2bhk.jpg';
-import img3BHK from '../assets/3bhk.jpg';
-import img4BHK from '../assets/4bhk.jpg';
+
+
+
+
+
+import img1BHK from "../assets/1bhk_new.jpg";
+import img2BHK from "../assets/2bhk_new.jpg";
+import img3BHK from "../assets/3bhk_new.jpg";
+import img4BHK from "../assets/4bhk_new.jpg";
 
 const packages = [
   { name: "1 BHK", price: "₹2799", image: img1BHK },

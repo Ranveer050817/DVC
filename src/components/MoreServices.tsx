@@ -2,13 +2,21 @@ import { motion } from 'motion/react';
 import { Home, Utensils, Building2, Warehouse, Briefcase, TreePine, Castle } from 'lucide-react';
 import { openWhatsApp } from '../utils/contact';
 
-import imgDCHouse from '../assets/dchouse.jpg';
-import imgDCRestaurant from '../assets/dcresraunt.jpg';
-import imgDCHotel from '../assets/dchotel.jpg';
-import imgDCWarehouse from '../assets/dcwarehouse.jpg';
-import imgDCOffice from '../assets/dcoffice.jpg';
-import imgDCResort from '../assets/dcresort.jpg';
-import imgDCBungalow from '../assets/dcbunglow_villa.jpg';
+
+
+
+
+
+
+
+
+import imgDCHouse from "../assets/dcshop_new.jpg";
+import imgDCRestaurant from "../assets/dcresraunt_new.jpg";
+import imgDCHotel from "../assets/dchotel_new.jpg";
+import imgDCWarehouse from "../assets/dcwarehouse_new.jpg";
+import imgDCOffice from "../assets/dcoffice_new.jpg";
+import imgDCResort from "../assets/dcresort_new.jpg";
+import imgDCBungalow from "../assets/dcbunglow&villa_new.jpg";
 
 const services = [
   {

@@ -1,9 +1,14 @@
 import { motion } from 'motion/react';
 import { BeforeAfterSlider } from './BeforeAfterSlider';
-import imgKitchenB from '../assets/kitchenB.jpg';
-import imgKitchenA from '../assets/kitchenA.jpg';
-import imgBefore from '../assets/before.jpg';
-import imgAfter from '../assets/after.jpg';
+
+
+
+
+
+import imgKitchenB from "../assets/kitchenB_new.jpg";
+import imgKitchenA from "../assets/kitchenA,jpg_new.jpg";
+import imgBefore from "../assets/before_new.jpg";
+import imgAfter from "../assets/after_new.jpg";
 
 const comparisons = [
   {

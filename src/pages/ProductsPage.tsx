@@ -1,19 +1,33 @@
 import { motion } from 'motion/react';
 import { openWhatsApp } from '../utils/contact';
 
-import imgFloorCleaner from '../assets/floorcleaner.jpg';
-import imgToiletCleaner from '../assets/toiletcleaner.jpg';
-import imgGlassCleaner from '../assets/glasscleaner.jpg';
-import imgBathroomCleaner from '../assets/bathroomcleaner.jpg';
-import imgKitchenDegreaser from '../assets/kitchendegreaser.jpg';
-import imgMultiPurpose from '../assets/multipurpose.jpg';
-import imgHardWater from '../assets/hardwaterremover.jpg';
-import imgFurniturePolish from '../assets/furniturepolish.jpg';
-import imgTileCleaner from '../assets/tilecleaner.jpg';
-import imgMicrofiber from '../assets/microfiber.jpg';
-import imgToiletBrush from '../assets/toiletbrush.jpg';
-import imgMop from '../assets/mop.jpg';
-import imgSprayBottle from '../assets/spraybottle.jpg';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import imgFloorCleaner from "../assets/floorcleaner_new.jpg";
+import imgToiletCleaner from "../assets/toiletcleaner_new.jpg";
+import imgGlassCleaner from "../assets/glasscleaner_new.jpg";
+import imgBathroomCleaner from "../assets/bathroomcleaner_new.jpg";
+import imgKitchenDegreaser from "../assets/kitchendegreaser_new.jpg";
+import imgMultiPurpose from "../assets/multipurpose_new.jpg";
+import imgHardWater from "../assets/hardwaterremover_new.jpg";
+import imgFurniturePolish from "../assets/furniturepolish_new.jpg";
+import imgTileCleaner from "../assets/tilecleaner_new.jpg";
+import imgMicrofiber from "../assets/microfiber_new.jpg";
+import imgToiletBrush from "../assets/toiletbrush_new.jpg";
+import imgMop from "../assets/mop_new.jpg";
+import imgSprayBottle from "../assets/spraybottle_new.jpg";
 
 const products = [
   {
@@ -109,12 +123,13 @@ export function ProductsPage() {
             transition={{ delay: index * 0.1 }}
             className="bg-black/40 border border-white/5 backdrop-blur-sm group hover:border-[#ff3b30]/50 transition-all duration-500 flex flex-col overflow-hidden h-[500px]"
           >
-            <div className="relative h-[80%] w-full p-0 flex items-center justify-center bg-white/5">
+            
+            <div className="relative h-[80%] w-full p-6 flex items-center justify-center bg-white/5 overflow-hidden">
               <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none" />
               <img referrerPolicy="no-referrer" 
                 src={product.image} 
                 alt={product.name}
-                className="w-full h-full object-cover object-center block transform group-hover:scale-110 transition-transform duration-700 relative z-0" 
+                className="w-full h-full object-contain block transform group-hover:scale-110 transition-transform duration-700 relative z-0 drop-shadow-2xl" 
               />
             </div>
             
