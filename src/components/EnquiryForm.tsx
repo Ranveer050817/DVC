@@ -66,7 +66,7 @@ export function EnquiryForm() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="max-w-3xl mx-auto w-full glass p-8 md:p-12 rounded-2xl relative overflow-hidden"
+        className="max-w-3xl mx-auto w-full bg-white border border-[#E5E5E5] shadow-sm p-8 md:p-12 rounded-2xl relative overflow-hidden"
       >
         {/* Glow accent */}
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-red-600/20 rounded-full blur-[100px] pointer-events-none"></div>
@@ -74,48 +74,48 @@ export function EnquiryForm() {
         <form onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col gap-2">
-              <label className="text-xs font-bold uppercase tracking-widest text-gray-400">Client Name *</label>
+              <label className="text-xs font-bold uppercase tracking-widest text-[#555555]">Client Name *</label>
               <input 
                 required type="text" name="name" value={formData.name} onChange={handleChange}
-                className="bg-black/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-red-600 transition-colors"
+                className="bg-white border border-[#E5E5E5] shadow-sm rounded-lg p-3 text-[#111111] focus:outline-none focus:border-red-600 transition-colors"
                 placeholder="John Doe"
               />
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-xs font-bold uppercase tracking-widest text-gray-400">Phone Number *</label>
+              <label className="text-xs font-bold uppercase tracking-widest text-[#555555]">Phone Number *</label>
               <input 
                 required type="tel" name="phone" value={formData.phone} onChange={handleChange}
-                className="bg-black/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-red-600 transition-colors"
+                className="bg-white border border-[#E5E5E5] shadow-sm rounded-lg p-3 text-[#111111] focus:outline-none focus:border-red-600 transition-colors"
                 placeholder="+91 98765 43210"
               />
             </div>
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-xs font-bold uppercase tracking-widest text-gray-400">Address *</label>
+            <label className="text-xs font-bold uppercase tracking-widest text-[#555555]">Address *</label>
             <input 
               required type="text" name="address" value={formData.address} onChange={handleChange}
-              className="bg-black/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-red-600 transition-colors"
+              className="bg-white border border-[#E5E5E5] shadow-sm rounded-lg p-3 text-[#111111] focus:outline-none focus:border-red-600 transition-colors"
               placeholder="Your full address..."
             />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col gap-2">
-              <label className="text-xs font-bold uppercase tracking-widest text-gray-400">Select Service *</label>
+              <label className="text-xs font-bold uppercase tracking-widest text-[#555555]">Select Service *</label>
               <select 
                 required name="service" value={formData.service} onChange={handleChange}
-                className="bg-black/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-red-600 transition-colors [&>option]:bg-brand-black"
+                className="bg-white border border-[#E5E5E5] shadow-sm rounded-lg p-3 text-[#111111] focus:outline-none focus:border-red-600 transition-colors "
               >
                 <option value="" disabled>Select a service</option>
                 {serviceOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
               </select>
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-xs font-bold uppercase tracking-widest text-gray-400">Select Package</label>
+              <label className="text-xs font-bold uppercase tracking-widest text-[#555555]">Select Package</label>
               <select 
                 name="package" value={formData.package} onChange={handleChange}
-                className="bg-black/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-red-600 transition-colors [&>option]:bg-brand-black"
+                className="bg-white border border-[#E5E5E5] shadow-sm rounded-lg p-3 text-[#111111] focus:outline-none focus:border-red-600 transition-colors "
               >
                 <option value="" disabled>Select a package</option>
                 {packageOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
@@ -125,26 +125,26 @@ export function EnquiryForm() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col gap-2">
-              <label className="text-xs font-bold uppercase tracking-widest text-gray-400">Preferred Date *</label>
+              <label className="text-xs font-bold uppercase tracking-widest text-[#555555]">Preferred Date *</label>
               <input 
                 required type="date" name="date" value={formData.date} onChange={handleChange}
-                className="bg-black/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-red-600 transition-colors"
+                className="bg-white border border-[#E5E5E5] shadow-sm rounded-lg p-3 text-[#111111] focus:outline-none focus:border-red-600 transition-colors"
               />
             </div>
             <div className="flex flex-col gap-2">
-              <label className="text-xs font-bold uppercase tracking-widest text-gray-400">Preferred Time Slot *</label>
+              <label className="text-xs font-bold uppercase tracking-widest text-[#555555]">Preferred Time Slot *</label>
               <input 
                 required type="time" name="timeSlot" value={formData.timeSlot} onChange={handleChange}
-                className="bg-black/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-red-600 transition-colors"
+                className="bg-white border border-[#E5E5E5] shadow-sm rounded-lg p-3 text-[#111111] focus:outline-none focus:border-red-600 transition-colors"
               />
             </div>
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-xs font-bold uppercase tracking-widest text-gray-400">Additional Message</label>
+            <label className="text-xs font-bold uppercase tracking-widest text-[#555555]">Additional Message</label>
             <textarea 
               name="message" value={formData.message} onChange={handleChange} rows={4}
-              className="bg-black/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-red-600 transition-colors resize-none"
+              className="bg-white border border-[#E5E5E5] shadow-sm rounded-lg p-3 text-[#111111] focus:outline-none focus:border-red-600 transition-colors resize-none"
               placeholder="Any special instructions..."
             ></textarea>
           </div>

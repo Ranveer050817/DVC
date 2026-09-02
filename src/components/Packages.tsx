@@ -39,7 +39,7 @@ export function Packages() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex flex-col bg-[#050505] border border-[#ff3b30]/30 hover:border-[#ff3b30]/60 hover:shadow-[0_0_30px_rgba(255,59,48,0.15)] rounded-[20px] overflow-hidden group transition-all duration-500 h-[550px]"
+              className="flex flex-col bg-white border border-[#E5E5E5] shadow-sm hover:border-[#ff3b30]/40 hover:shadow-[0_10px_30px_rgba(255,59,48,0.1)] rounded-[20px] overflow-hidden group transition-all duration-500 h-[550px]"
             >
               <div className="relative w-full h-72 overflow-hidden">
                 <img referrerPolicy="no-referrer"
@@ -49,13 +49,13 @@ export function Packages() {
                 />
               </div>
               
-              <div className="h-[20%] p-4 flex flex-col justify-between border-t border-[#ff3b30]/20 bg-[#050505]/80 backdrop-blur-md relative z-10">
+              <div className="h-[20%] p-4 flex flex-col justify-between border-t border-[#E5E5E5] bg-white/80 backdrop-blur-md relative z-10">
                 <div className="flex justify-between items-center px-1">
-                  <h3 className="font-black text-xl uppercase tracking-widest text-white">
+                  <h3 className="font-black text-xl uppercase tracking-widest text-[#111111]">
                     {pkg.name}
                   </h3>
                   <div className="text-right">
-                    <p className="text-[10px] text-gray-400 uppercase font-bold tracking-widest mb-0.5">
+                    <p className="text-[10px] text-[#555555] uppercase font-bold tracking-widest mb-0.5">
                       Starting From
                     </p>
                     <p className="text-lg font-black text-[#ff3b30] leading-none">

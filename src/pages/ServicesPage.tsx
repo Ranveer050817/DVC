@@ -77,7 +77,7 @@ export function ServicesPage() {
         transition={{ duration: 0.8 }}
         className="text-center space-y-6"
       >
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black uppercase tracking-tighter text-white leading-none">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-black uppercase tracking-tighter text-[#111111] leading-none">
           COMPLETE DEEP <span className="text-[#ff3b30]">CLEANING</span>
         </h1>
         <p className="text-[#ff3b30] font-bold tracking-[0.2em] uppercase text-sm md:text-base animate-text-shine">
@@ -94,16 +94,16 @@ export function ServicesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 hover:bg-white/10 hover:border-[#ff3b30]/50 transition-all duration-300 group flex flex-col h-full"
+              className="bg-white border border-[#E5E5E5] shadow-sm rounded-2xl p-6 sm:p-8 hover:bg-[#F7F7F7] hover:border-[#ff3b30]/50 transition-all duration-300 group flex flex-col h-full"
             >
-              <h3 className="text-xl font-black uppercase text-white mb-6 group-hover:text-[#ff3b30] transition-colors">
+              <h3 className="text-xl font-black uppercase text-[#111111] mb-6 group-hover:text-[#ff3b30] transition-colors">
                 {section.title}
               </h3>
               <ul className="space-y-4 mb-8 flex-1">
                 {section.items.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-[#ff3b30] shrink-0 mt-0.5" />
-                    <span className="text-gray-300 text-sm font-medium leading-relaxed">{item}</span>
+                    <span className="text-[#555555] text-sm font-medium leading-relaxed">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -123,9 +123,9 @@ export function ServicesPage() {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="text-2xl sm:text-3xl font-black uppercase tracking-widest text-white flex items-center gap-4 border-b border-white/10 pb-4"
+          className="text-2xl sm:text-3xl font-black uppercase tracking-widest text-[#111111] flex items-center gap-4 border-b border-[#E5E5E5] shadow-sm pb-4"
         >
-          <span className="text-yellow-500">⭐</span> Add-On Services <span className="text-gray-500 text-sm ml-auto">(Extra Charges)</span>
+          <span className="text-yellow-500">⭐</span> Add-On Services <span className="text-[#777777] text-sm ml-auto">(Extra Charges)</span>
         </motion.h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -136,9 +136,9 @@ export function ServicesPage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.4 }}
-              className="bg-black border border-white/10 rounded-xl p-6 flex items-center justify-between group hover:border-[#ff3b30] transition-colors cursor-pointer"
+              className="bg-white border border-[#E5E5E5] shadow-sm rounded-xl p-6 flex items-center justify-between group hover:border-[#ff3b30] transition-colors cursor-pointer"
             >
-              <span className="font-bold text-white text-sm uppercase tracking-wider group-hover:text-[#ff3b30] transition-colors">
+              <span className="font-bold text-[#111111] text-sm uppercase tracking-wider group-hover:text-[#ff3b30] transition-colors">
                 {addon}
               </span>
               <Plus className="w-5 h-5 text-[#ff3b30]" />

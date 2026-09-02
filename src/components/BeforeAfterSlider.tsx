@@ -56,7 +56,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage, label }: SliderProp
   return (
     <div 
         ref={containerRef}
-        className="h-[250px] lg:h-[300px] relative rounded-xl overflow-hidden glass group cursor-ew-resize select-none"
+        className="h-[250px] lg:h-[300px] relative rounded-xl overflow-hidden bg-[#F7F7F7] border border-[#E5E5E5] group cursor-ew-resize select-none"
         onMouseDown={(e) => {
           setIsDragging(true);
           handleMove(e.clientX);
@@ -86,18 +86,18 @@ export function BeforeAfterSlider({ beforeImage, afterImage, label }: SliderProp
         className="absolute inset-y-0 slider-line flex items-center justify-center z-10"
         style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
       >
-        <div className="w-10 h-10 bg-red-600 rounded-full border-4 border-black flex items-center justify-center">
+        <div className="w-10 h-10 bg-red-600 rounded-full border-4 border-white flex items-center justify-center">
           <ArrowLeftRight className="w-4 h-4 text-white pointer-events-none" />
         </div>
       </div>
 
       {/* Before Label */}
-      <div className="absolute top-6 left-6 px-4 py-1 bg-black/80 text-[10px] font-bold uppercase tracking-widest text-white rounded">
+      <div className="absolute top-6 left-6 px-4 py-1 bg-white/90 text-[10px] font-bold uppercase tracking-widest text-[#111111] shadow-sm rounded">
         {label} Before
       </div>
 
       {/* After Label */}
-      <div className="absolute top-6 right-6 px-4 py-1 bg-red-600 text-[10px] font-bold uppercase tracking-widest text-white rounded">
+      <div className="absolute top-6 right-6 px-4 py-1 bg-red-600 text-[10px] font-bold uppercase tracking-widest text-white shadow-sm rounded">
         {label} After
       </div>
     </div>

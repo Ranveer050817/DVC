@@ -36,7 +36,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex flex-col w-full font-sans uppercase leading-[0.9] tracking-tighter"
         >
-          <div className="text-[5rem] sm:text-[6.5rem] md:text-[8rem] lg:text-[8.5rem] font-black text-white/95">
+          <div className="text-[5rem] sm:text-[6.5rem] md:text-[8rem] lg:text-[8.5rem] font-black text-[#111111]">
             WHERE DIRT
           </div>
           <div className="text-[4rem] sm:text-[5.5rem] md:text-[7rem] lg:text-[7.5rem] font-black text-[#ff3b30]">
@@ -50,10 +50,10 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="space-y-6"
         >
-          <p className="text-gray-300 text-sm sm:text-base lg:text-lg max-w-lg leading-relaxed font-medium">
+          <p className="text-[#555555] text-sm sm:text-base lg:text-lg max-w-lg leading-relaxed font-medium">
             Professional Deep Cleaning Services for Homes, Offices, Restaurants, Hotels, Warehouses, Villas, Resorts & Bungalows.
           </p>
-          <p className="text-gray-400 text-sm sm:text-base lg:text-lg max-w-lg leading-relaxed font-medium">
+          <p className="text-[#555555] text-sm sm:text-base lg:text-lg max-w-lg leading-relaxed font-medium">
             Experience premium cleaning with trained professionals, modern equipment and guaranteed customer satisfaction.
           </p>
         </motion.div>
@@ -73,14 +73,14 @@ export function Hero() {
             </button>
             <button 
               onClick={() => window.open('https://wa.me/917208901545', '_blank')}
-              className="bg-black text-[#ff3b30] border border-[#ff3b30]/30 px-8 py-4 font-black uppercase text-sm tracking-widest hover:border-[#ff3b30] hover:bg-black/80 transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-3 rounded-xl"
+              className="bg-white text-[#ff3b30] border border-[#ff3b30]/30 shadow-sm shadow-sm px-8 py-4 font-black uppercase text-sm tracking-widest hover:border-[#ff3b30] hover:bg-[#F7F7F7] transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-3 rounded-xl"
             >
               <WhatsAppIcon className="w-5 h-5 text-[#ff3b30]" />
               WhatsApp
             </button>
             <a 
               href={`tel:${CALL_NUMBER}`}
-              className="bg-black text-[#ff3b30] border border-[#ff3b30]/30 px-8 py-4 font-black uppercase text-sm tracking-widest hover:border-[#ff3b30] hover:bg-black/80 transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-3 rounded-xl"
+              className="bg-white text-[#ff3b30] border border-[#ff3b30]/30 shadow-sm px-8 py-4 font-black uppercase text-sm tracking-widest hover:border-[#ff3b30] hover:bg-[#F7F7F7] transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-3 rounded-xl"
             >
               <Phone className="w-5 h-5 text-[#ff3b30]" />
               Call Now

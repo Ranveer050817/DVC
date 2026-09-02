@@ -96,7 +96,7 @@ export function MoreServices() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-black/40 border border-white/5 backdrop-blur-sm group hover:border-[#ff3b30]/50 transition-all duration-500 flex flex-col overflow-hidden"
+              className="bg-black/40 border border-white/5 backdrop-blur-sm group hover:border-[#ff3b30]/40 transition-all duration-500 flex flex-col overflow-hidden"
             >
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500 z-10" />
@@ -105,7 +105,7 @@ export function MoreServices() {
                   alt={service.name}
                   className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-700" 
                 />
-                <div className="absolute top-4 left-4 z-20 bg-black/80 backdrop-blur-md p-3 rounded-xl border border-white/10 group-hover:border-[#ff3b30] transition-colors duration-300">
+                <div className="absolute top-4 left-4 z-20 bg-white/90 backdrop-blur-md p-3 rounded-xl border border-[#E5E5E5] shadow-sm group-hover:border-[#ff3b30] transition-colors duration-300">
                   <Icon className="w-6 h-6 text-[#ff3b30]" />
                 </div>
               </div>
@@ -114,7 +114,7 @@ export function MoreServices() {
                 <h3 className="text-xl font-bold uppercase tracking-tight mb-4 group-hover:text-[#ff3b30] transition-colors">
                   {service.name}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-8 flex-1">
+                <p className="text-[#555555] text-sm leading-relaxed mb-8 flex-1">
                   {service.description}
                 </p>
                 

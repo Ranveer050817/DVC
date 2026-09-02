@@ -99,7 +99,7 @@ export function ProductsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-2xl md:text-3xl font-bold uppercase tracking-tight text-white mt-4"
+          className="text-2xl md:text-3xl font-bold uppercase tracking-tight text-[#111111] mt-4"
         >
           Premium Cleaning Products
         </motion.h2>
@@ -107,7 +107,7 @@ export function ProductsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-gray-400 max-w-2xl uppercase tracking-widest text-sm"
+          className="text-[#555555] max-w-2xl uppercase tracking-widest text-sm"
         >
           High Quality Professional Cleaning Products for Home &amp; Commercial Use.
         </motion.p>
@@ -121,11 +121,11 @@ export function ProductsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="bg-black/40 border border-white/5 backdrop-blur-sm group hover:border-[#ff3b30]/50 transition-all duration-500 flex flex-col overflow-hidden h-[500px]"
+            className="bg-white border border-[#E5E5E5] shadow-sm backdrop-blur-sm group hover:border-[#ff3b30]/50 transition-all duration-500 flex flex-col overflow-hidden h-[500px]"
           >
             
-            <div className="relative h-[80%] w-full p-6 flex items-center justify-center bg-white/5 overflow-hidden">
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none" />
+            <div className="relative h-[80%] w-full p-6 flex items-center justify-center bg-[#F7F7F7] overflow-hidden">
+              <div className="absolute inset-0 bg-white/40 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none" />
               <img referrerPolicy="no-referrer" 
                 src={product.image} 
                 alt={product.name}

@@ -70,12 +70,12 @@ export function Reviews() {
               ))}
             </div>
             
-            <p className="text-gray-300 text-sm md:text-base italic relative z-10 flex-1 leading-relaxed">
+            <p className="text-[#555555] text-sm md:text-base italic relative z-10 flex-1 leading-relaxed">
               "{review.text}"
             </p>
             
             <div className="mt-4 relative z-10">
-              <h4 className="font-black text-white uppercase tracking-wider">{review.name}</h4>
+              <h4 className="font-black text-[#111111] uppercase tracking-wider">{review.name}</h4>
               <p className="text-xs text-red-600 uppercase font-bold tracking-widest">{review.location}</p>
             </div>
           </motion.div>

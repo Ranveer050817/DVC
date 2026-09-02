@@ -13,9 +13,9 @@ import { FloatingButtons } from './components/FloatingButtons';
 
 export default function App() {
   return (
-    <div className="flex flex-col min-h-screen w-full relative bg-[#0b0b0b] text-white font-sans antialiased">
-      <div className="fixed top-0 right-0 w-[500px] h-[500px] bg-red-900/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
-      <div className="fixed bottom-0 left-0 w-[400px] h-[400px] bg-red-900/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
+    <div className="flex flex-col min-h-screen w-full relative bg-white text-[#111111] font-sans antialiased">
+      <div className="fixed top-0 right-0 w-[500px] h-[500px] bg-red-500/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+      <div className="fixed bottom-0 left-0 w-[400px] h-[400px] bg-red-500/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
       
       <div className="relative z-10 flex flex-col min-h-screen">
         <Navbar />
@@ -26,7 +26,7 @@ export default function App() {
           <Route path="/products" element={<ProductsPage />} />
         </Routes>
         
-        <footer className="shrink-0 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between px-4 lg:px-12 py-6 text-[10px] uppercase font-bold tracking-widest text-gray-600 gap-4 sm:gap-0 bg-[#0b0b0b] z-10 mt-auto">
+        <footer className="shrink-0 border-t border-[#E5E5E5] flex flex-col sm:flex-row items-center justify-between px-4 lg:px-12 py-6 text-[10px] uppercase font-bold tracking-widest text-[#555555] gap-4 sm:gap-0 bg-white z-10 mt-auto">
           <div className="flex items-center gap-4">
             <div className="flex flex-col gap-1">
               <span>Instagram / DevilCleanerzz</span>
