@@ -26,9 +26,9 @@ export function Navbar() {
       </Link>
       
       <div className="flex items-center justify-center flex-1 gap-2 sm:gap-4 md:gap-10 text-[9px] sm:text-[10px] md:text-sm font-bold tracking-widest uppercase px-1 sm:px-4 md:px-8 mx-auto" style={{ width: '358.025px', height: '20.5px' }}>
-        <Link to="/" className={`${isActive('/') ? 'text-[#ff3b30]' : 'text-white'} hover:text-[#ff3b30] transition-colors`}>Home</Link>
-        <Link to="/services" className={`${isActive('/services') ? 'text-[#ff3b30]' : 'text-white'} hover:text-[#ff3b30] transition-colors`}>Services</Link>
-        <Link to="/products" className={`${isActive('/products') ? 'text-[#ff3b30]' : 'text-white'} hover:text-[#ff3b30] transition-colors`}>Products</Link>
+        <Link to="/" className={`${isActive('/') ? 'text-[#ff3b30]' : 'text-black'} hover:text-[#ff3b30] transition-colors`}>Home</Link>
+        <Link to="/services" className={`${isActive('/services') ? 'text-[#ff3b30]' : 'text-black'} hover:text-[#ff3b30] transition-colors`}>Services</Link>
+        <Link to="/products" className={`${isActive('/products') ? 'text-[#ff3b30]' : 'text-black'} hover:text-[#ff3b30] transition-colors`}>Products</Link>
       </div>
 
       <button 
