@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { openWhatsApp, EnquiryDetails } from '../utils/contact';
+import { openWhatsApp } from '../utils/contact';
+import { fetchPublishedPackages, fetchPublishedServices } from '../lib/supabase';
 
-const serviceOptions = [
+const DEFAULT_SERVICE_OPTIONS = [
   "Home Deep Cleaning",
   "Office Deep Cleaning",
   "Restaurant Cleaning",
@@ -13,9 +14,12 @@ const serviceOptions = [
   "Hotel Cleaning"
 ];
 
-const packageOptions = ["1 BHK", "2 BHK", "3 BHK", "4 BHK", "Not Applicable"];
+const DEFAULT_PACKAGE_OPTIONS = ["1 BHK", "2 BHK", "3 BHK", "4 BHK", "Not Applicable"];
 
 export function EnquiryForm() {
+  const [serviceOptions, setServiceOptions] = useState<string[]>(DEFAULT_SERVICE_OPTIONS);
+  const [packageOptions, setPackageOptions] = useState<string[]>(DEFAULT_PACKAGE_OPTIONS);
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -27,6 +31,30 @@ export function EnquiryForm() {
     message: ''
   });
 
+  useEffect(() => {
+    let isMounted = true;
+    async function loadOptions() {
+      const [pkgsRes, srvsRes] = await Promise.all([
+        fetchPublishedPackages(),
+        fetchPublishedServices()
+      ]);
+      if (isMounted) {
+        if (srvsRes.isLive && srvsRes.data.length > 0) {
+          const names = Array.from(new Set(srvsRes.data.map(s => s.name)));
+          setServiceOptions(names);
+        }
+        if (pkgsRes.isLive && pkgsRes.data.length > 0) {
+          const names = pkgsRes.data.map(p => `${p.name}${p.price ? ` (${p.price})` : ''}`);
+          setPackageOptions([...names, "Not Applicable"]);
+        }
+      }
+    }
+    loadOptions();
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -34,7 +62,7 @@ export function EnquiryForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const { name, phone, address, service, package: pkg, date, timeSlot, message } = formData;
+    const { name, phone, address, service, package: pkg, date, timeSlot } = formData;
     
     openWhatsApp({
       name,
@@ -105,7 +133,7 @@ export function EnquiryForm() {
               <label className="text-xs font-bold uppercase tracking-widest text-[#555555]">Select Service *</label>
               <select 
                 required name="service" value={formData.service} onChange={handleChange}
-                className="bg-white border border-[#E5E5E5] shadow-sm rounded-lg p-3 text-[#111111] focus:outline-none focus:border-red-600 transition-colors "
+                className="bg-white border border-[#E5E5E5] shadow-sm rounded-lg p-3 text-[#111111] focus:outline-none focus:border-red-600 transition-colors"
               >
                 <option value="" disabled>Select a service</option>
                 {serviceOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
@@ -115,7 +143,7 @@ export function EnquiryForm() {
               <label className="text-xs font-bold uppercase tracking-widest text-[#555555]">Select Package</label>
               <select 
                 name="package" value={formData.package} onChange={handleChange}
-                className="bg-white border border-[#E5E5E5] shadow-sm rounded-lg p-3 text-[#111111] focus:outline-none focus:border-red-600 transition-colors "
+                className="bg-white border border-[#E5E5E5] shadow-sm rounded-lg p-3 text-[#111111] focus:outline-none focus:border-red-600 transition-colors"
               >
                 <option value="" disabled>Select a package</option>
                 {packageOptions.map(opt => <option key={opt} value={opt}>{opt}</option>)}
@@ -149,7 +177,7 @@ export function EnquiryForm() {
             ></textarea>
           </div>
 
-          <button type="submit" className="w-full bg-red-600 text-white px-8 py-4 mt-4 font-black uppercase text-sm tracking-widest hover:bg-red-700 transition-all glow-red rounded-lg">
+          <button type="submit" className="w-full bg-red-600 text-white px-8 py-4 mt-4 font-black uppercase text-sm tracking-widest hover:bg-red-700 transition-all rounded-lg">
             Book Now
           </button>
         </form>

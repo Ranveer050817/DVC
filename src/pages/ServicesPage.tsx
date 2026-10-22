@@ -1,8 +1,16 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { CheckCircle2, Plus } from 'lucide-react';
 import { openWhatsApp } from '../utils/contact';
+import { fetchPublishedServices, ServiceItem } from '../lib/supabase';
 
-const cleaningSections = [
+interface CleaningSection {
+  title: string;
+  items: string[];
+  description?: string;
+}
+
+const DEFAULT_CLEANING_SECTIONS: CleaningSection[] = [
   {
     title: "Living Room & Bedrooms",
     items: [
@@ -60,7 +68,7 @@ const cleaningSections = [
   }
 ];
 
-const addOns = [
+const DEFAULT_ADD_ONS = [
   "Sofa Shampooing",
   "Mattress Shampooing",
   "Carpet Shampooing",
@@ -69,6 +77,46 @@ const addOns = [
 ];
 
 export function ServicesPage() {
+  const [sections, setSections] = useState<CleaningSection[]>(DEFAULT_CLEANING_SECTIONS);
+  const [addOns, setAddOns] = useState<string[]>(DEFAULT_ADD_ONS);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let isMounted = true;
+    async function load() {
+      setLoading(true);
+      const res = await fetchPublishedServices();
+      if (isMounted) {
+        if (res.isLive && res.data.length > 0) {
+          // Check if any services have inclusions or are marked as addons
+          const dbAddons = res.data
+            .filter(s => s.category?.toLowerCase().includes('add') || s.name.toLowerCase().includes('shampoo'))
+            .map(s => s.name);
+          
+          const dbSections = res.data
+            .filter(s => !s.category?.toLowerCase().includes('add') && (s.inclusions && s.inclusions.length > 0))
+            .map(s => ({
+              title: s.name,
+              items: s.inclusions || [],
+              description: s.description
+            }));
+
+          if (dbSections.length > 0) {
+            setSections(dbSections);
+          }
+          if (dbAddons.length > 0) {
+            setAddOns(dbAddons);
+          }
+        }
+        setLoading(false);
+      }
+    }
+    load();
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   return (
     <div className="flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col gap-16 lg:gap-24">
       <motion.div 
@@ -87,7 +135,7 @@ export function ServicesPage() {
 
       <div className="flex flex-col gap-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {cleaningSections.map((section, index) => (
+          {sections.map((section, index) => (
             <motion.div 
               key={section.title}
               initial={{ opacity: 0, y: 20 }}
@@ -96,10 +144,15 @@ export function ServicesPage() {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="bg-white border border-[#E5E5E5] shadow-sm rounded-2xl p-6 sm:p-8 hover:bg-[#F7F7F7] hover:border-[#ff3b30]/50 transition-all duration-300 group flex flex-col h-full"
             >
-              <h3 className="text-xl font-black uppercase text-[#111111] mb-6 group-hover:text-[#ff3b30] transition-colors">
+              <h3 className="text-xl font-black uppercase text-[#111111] mb-2 group-hover:text-[#ff3b30] transition-colors">
                 {section.title}
               </h3>
-              <ul className="space-y-4 mb-8 flex-1">
+              {section.description && (
+                <p className="text-xs text-[#666666] mb-4">
+                  {section.description}
+                </p>
+              )}
+              <ul className="space-y-4 mb-8 flex-1 mt-2">
                 {section.items.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-[#ff3b30] shrink-0 mt-0.5" />
@@ -136,6 +189,7 @@ export function ServicesPage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.4 }}
+              onClick={() => openWhatsApp({ service: `Add-On: ${addon}` })}
               className="bg-white border border-[#E5E5E5] shadow-sm rounded-xl p-6 flex items-center justify-between group hover:border-[#ff3b30] transition-colors cursor-pointer"
             >
               <span className="font-bold text-[#111111] text-sm uppercase tracking-wider group-hover:text-[#ff3b30] transition-colors">

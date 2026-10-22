@@ -1,9 +1,10 @@
-import { Hero } from '../components/Hero';
-import { BeforeAfter } from '../components/BeforeAfter';
-import { Packages } from '../components/Packages';
-import { MoreServices } from '../components/MoreServices';
-import { EnquiryForm } from '../components/EnquiryForm';
-import { Reviews } from '../components/Reviews';
+import { Hero } from "../components/Hero";
+import { BeforeAfter } from "../components/BeforeAfter";
+import { Packages } from "../components/Packages";
+import { MoreServices } from "../components/MoreServices";
+import { OurResults } from "../components/OurResults";
+import { EnquiryForm } from "../components/EnquiryForm";
+import { Reviews } from "../components/Reviews";
 
 export function HomePage() {
   return (
@@ -12,6 +13,7 @@ export function HomePage() {
       <BeforeAfter />
       <Packages />
       <MoreServices />
+      <OurResults />
       <EnquiryForm />
       <Reviews />
     </div>

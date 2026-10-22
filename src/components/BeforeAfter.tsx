@@ -1,26 +1,23 @@
-import { motion } from 'motion/react';
-import { BeforeAfterSlider } from './BeforeAfterSlider';
+import { motion } from "motion/react";
+import { BeforeAfterSlider } from "./BeforeAfterSlider";
 
-
-
-
-
+// Original Before & After transformation images
 import imgKitchenB from "../assets/kitchenB_new.jpg";
 import imgKitchenA from "../assets/kitchenA_new.jpg";
 import imgBefore from "../assets/before_new.jpg";
 import imgAfter from "../assets/after_new.jpg";
 
-const comparisons = [
+const originalComparisons = [
   {
-    label: "Kitchen",
     before: imgKitchenB,
-    after: imgKitchenA
+    after: imgKitchenA,
+    label: "Kitchen",
   },
   {
-    label: "Hall",
     before: imgBefore,
-    after: imgAfter
-  }
+    after: imgAfter,
+    label: "Hall",
+  },
 ];
 
 export function BeforeAfter() {
@@ -37,8 +34,9 @@ export function BeforeAfter() {
           BEFORE <span className="text-red-600">&</span> AFTER
         </h2>
       </motion.div>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 w-full">
-        {comparisons.map((comp, index) => (
+        {originalComparisons.map((comp, index) => (
           <motion.div
             key={comp.label}
             initial={{ opacity: 0, scale: 0.95 }}

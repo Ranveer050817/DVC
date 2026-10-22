@@ -1,6 +1,5 @@
-import { useState, useRef, useEffect } from 'react';
-import { motion } from 'motion/react';
-import { ArrowLeftRight } from 'lucide-react';
+import { useState, useRef, useEffect } from "react";
+import { ArrowLeftRight } from "lucide-react";
 
 interface SliderProps {
   beforeImage: string;
@@ -35,28 +34,28 @@ export function BeforeAfterSlider({ beforeImage, afterImage, label }: SliderProp
 
   useEffect(() => {
     if (isDragging) {
-      window.addEventListener('mousemove', handleMouseMove);
-      window.addEventListener('mouseup', handleMouseUp);
-      window.addEventListener('touchmove', handleTouchMove);
-      window.addEventListener('touchend', handleMouseUp);
+      window.addEventListener("mousemove", handleMouseMove);
+      window.addEventListener("mouseup", handleMouseUp);
+      window.addEventListener("touchmove", handleTouchMove);
+      window.addEventListener("touchend", handleMouseUp);
     } else {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-      window.removeEventListener('touchmove', handleTouchMove);
-      window.removeEventListener('touchend', handleMouseUp);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchend", handleMouseUp);
     }
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseup', handleMouseUp);
-      window.removeEventListener('touchmove', handleTouchMove);
-      window.removeEventListener('touchend', handleMouseUp);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchend", handleMouseUp);
     };
   }, [isDragging]);
 
   return (
     <div 
         ref={containerRef}
-        className="h-[250px] lg:h-[300px] relative rounded-xl overflow-hidden bg-[#F7F7F7] border border-[#E5E5E5] group cursor-ew-resize select-none"
+        className="h-[250px] lg:h-[300px] relative rounded-xl overflow-hidden bg-[#F7F7F7] border border-[#E5E5E5] group cursor-ew-resize select-none touch-none"
         onMouseDown={(e) => {
           setIsDragging(true);
           handleMove(e.clientX);
@@ -84,7 +83,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage, label }: SliderProp
       {/* Slider Line */}
       <div 
         className="absolute inset-y-0 slider-line flex items-center justify-center z-10"
-        style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
+        style={{ left: `${sliderPosition}%`, transform: "translateX(-50%)" }}
       >
         <div className="w-10 h-10 bg-red-600 rounded-full border-4 border-white flex items-center justify-center">
           <ArrowLeftRight className="w-4 h-4 text-white pointer-events-none" />
